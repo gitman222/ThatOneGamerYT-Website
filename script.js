@@ -1,5 +1,4 @@
 const channelIdCarry =
-
 // Fetch subscriber count from YouTube API
 function fetchSubscriberCount() {
     fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${UC_-RhG9pbrYTsGPVmCns_kQ}&key=AIzaSyAwxeFvT3qsOM54WdG1VRvY2mMCHHvjplw`)
@@ -13,15 +12,12 @@ function fetchSubscriberCount() {
             document.getElementById('subscriberCount').textContent = "Unavailable";
         });
 }
-
 // Call the function to update the subscriber count
 fetchSubscriberCount();
-
 // Smooth scrolling to sections
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
-
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
